@@ -1,4 +1,4 @@
-FROM registry.ctdn.net/python:3.10.6-alpine3.16 as builder
+FROM registry.ctdn.net/python:3.8.10-alpine3.16 as builder
 
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
@@ -9,7 +9,7 @@ COPY ./requirements.txt requirements.txt
 
 RUN pip install --user -r requirements.txt
 
-FROM registry.ctdn.net/python:3.10.6-alpine3.16
+FROM registry.ctdn.net/python:3.8.10-alpine3.16
 
 ENV PYTHONUNBUFFERED 1
 

@@ -3,6 +3,11 @@
 -   Flask
 -   rembg
 
+### TODO
+- [x] Image URL Support
+- [x] File Upload Support
+- [ ] Remove Options
+
 ### Usages (Test URL: https://rmbg-web-api.heroku.ctdn.dev)
 
 -   Remove Background from URL (GET/POST)
