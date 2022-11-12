@@ -18,7 +18,7 @@ def index():
             data = file.stream.read()
             result = remove(data=data)
             return Response(response=result, mimetype=mine_type, headers={
-                'Content-Disposition': f'attachment; filename=removedbg_{filename}'
+                'Content-Disposition': f'inline; filename=removedbg_{filename}'
             })
 
     url = request.args.get('url') or request.form.get('url')
@@ -28,7 +28,7 @@ def index():
         data = downloadImageFromUrl.content
         result = remove(data=data)
         return Response(response=result, mimetype=mine_type, headers={
-            'Content-Disposition': f'attachment; filename=removedbg_{url.split("/")[-1]}'
+            'Content-Disposition': f'inline; filename=removedbg_{url.split("/")[-1]}'
         })
 
     return Response(response='No file or url provided', status=400)
